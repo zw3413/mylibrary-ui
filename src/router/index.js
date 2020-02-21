@@ -59,14 +59,13 @@ export const constantRoutes = [
 
 
   {
-    path: '/admin',
-    name: 'Admin',
+    path: '/home',
+    name: 'Home',
     component: Layout,
-    redirect: '/admin/index',
+    redirect: '/home/index',
     children: [
       {
         path: 'index',
-        name: 'index',
         component: () => import('@/views/dashboard/index'),
         //meta: { title: 'Admin', icon: 'dashboard' }
 
@@ -83,7 +82,6 @@ export const constantRoutes = [
     children: [
       {
         path: 'index',
-        name: 'index',
         component: () => import('@/views/operation/index'),
         meta: { title: 'Operation', icon: 'example' }
       }
@@ -107,6 +105,12 @@ export const constantRoutes = [
         name: 'Author',
         component: () => import('@/views/data/author/index'),
         meta: { title: 'Author'}
+      },
+      {
+        path: 'file',
+        name: 'File',
+        component: () => import('@/views/data/file/index'),
+        meta: { title: 'File'}
       },
     ]
   },

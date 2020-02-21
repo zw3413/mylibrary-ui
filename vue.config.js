@@ -25,7 +25,7 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/',
+  publicPath: '/manage',
   outputDir: 'dist',
   assetsDir: 'static',
   // lintOnSave: process.env.NODE_ENV === 'development',
@@ -43,7 +43,7 @@ module.exports = {
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
     // it can be accessed in index.html to inject the correct title.
-    name: name,
+    name: '云榻1+1',
     resolve: {
       alias: {
         '@': resolve('src')
@@ -59,6 +59,7 @@ module.exports = {
       .rule('svg')
       .exclude.add(resolve('src/icons'))
       .end()
+
     config.module
       .rule('icons')
       .test(/\.svg$/)
